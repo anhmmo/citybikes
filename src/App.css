@@ -23,6 +23,26 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+#spinner {
+  background-color: rgb(240, 57, 57);
+  margin-top: 45vh;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  padding: 3rem 2rem !important;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  width: 100%;
+  max-width: 1280px;
+  margin: 2rem auto;
+}
 
 .App-link {
   color: #61dafb;
@@ -35,4 +55,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.marker-icon {
+  cursor: pointer;
+}
+.dropdown-menu {
+  max-height: 300px !important;
+  max-width: 220px !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
+.map-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
 }

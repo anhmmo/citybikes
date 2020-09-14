@@ -1,0 +1,24 @@
+{
+  "tyontekijat": [
+    {
+      "firstName": "Mauno",
+      "lastName": "Ahonen",
+      "phone": { "mobile": "0030453434", "home": "09093405354" }
+    },
+    {
+      "firstName": "Matti",
+      "lastName": "Näsä",
+      "phone": { "mobile": "0030453434", "home": "09093405354" }
+    },
+    {
+      "firstName": "Raimo",
+      "lastName": "Vormisto",
+      "phone": { "mobile": "0030453434", "home": "09093405354" }
+    },
+    {
+      "firstName": "Timo",
+      "lastName": "Silakka",
+      "phone": { "mobile": "0066356356", "home": null }
+    }
+  ]
+}
