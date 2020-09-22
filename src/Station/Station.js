@@ -30,9 +30,7 @@ function Station({ bikes, getHelsinki, getVantaa, getTiedot }) {
     );
   };
   //console.log(bikes);
-  function openLink(prams) {
-    window.open(prams);
-  }
+
   return (
     <>
       {weatherModal.status && (

@@ -72,7 +72,7 @@ const MapComponent = ({directions, setOpenDirection}) => {
         });
       });
 
-      var marker = new mapboxgl.Marker()
+      new mapboxgl.Marker()
      .setLngLat([location.lng, location.lat])
       .addTo(map);
 
