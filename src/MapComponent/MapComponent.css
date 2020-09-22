@@ -1,0 +1,8 @@
+.fa-window-close{
+    color: rgb(255, 142, 142);
+    font-size: 32px;
+    position: relative;
+    top: 10px;
+    z-index: 2;
+    cursor: pointer;
+}

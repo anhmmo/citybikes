@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import { Col, Card, Button, Badge, Jumbotron, Dropdown } from "react-bootstrap";
 import Map from "../Map";
 import WeatherBox from "../WeatherBox/WeatherBox";
+
+import MapComponent from '../MapComponent/MapComponent';
 
 function Station({ bikes, getHelsinki, getVantaa, getTiedot }) {
   const [openMap, setMap] = useState({ status: false, mapData: {} });
   const [dropDownValue, setDropdown] = useState({ value: "Valitse asema" });
   const [weatherData, setWeather] = useState({});
+  const [openDirections, setOpenDirection] = useState(false);
+  const [directions, setDirection] = useState([]);
   const [weatherModal, setWeatherModal] = useState({
     status: false,
     location: "",
@@ -38,6 +42,7 @@ function Station({ bikes, getHelsinki, getVantaa, getTiedot }) {
           weatherModal={weatherModal}
         />
       )}
+      {openDirections && <MapComponent directions={directions} setOpenDirection={setOpenDirection} />}
       <Jumbotron>
         <h1>Kaupunkipyörät</h1>
         <p>
@@ -140,14 +145,16 @@ function Station({ bikes, getHelsinki, getVantaa, getTiedot }) {
                 </Button>
                 <Button
                   onClick={() =>
-                    openLink(
-                      `http://maps.google.com/?q=${item.y},${item.x}&z=16`
-                    )
+                    {setDirection(item);
+                      setTimeout(()=>{
+                        setOpenDirection(true)
+                      }, 1000)
+                    }
                   }
                   variant="outline-warning"
-                  style={{ marginTop: "15px" }}
+                  style={{ marginTop: "15px", marginRight: "20px" }}
                 >
-                  Google map
+                  Reitti kartta
                 </Button>
                 <Button
                   onClick={() => {
